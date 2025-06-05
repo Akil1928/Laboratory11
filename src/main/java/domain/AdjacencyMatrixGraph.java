@@ -150,9 +150,25 @@ public class AdjacencyMatrixGraph implements Graph {
 
     @Override
     public void removeEdge(Object a, Object b) throws GraphException, ListException {
-        // Implementación pendiente
-    }
+        if (isEmpty()) {
+            throw new GraphException("No se puede eliminar una arista de un grafo vacío");
+        }
+        // Verificar si los vértices existen
+        if (!containsVertex(a) || !containsVertex(b)) {
+            throw new GraphException("No se puede eliminar arista entre vértices [" + a + "] y [" + b + "] porque uno o ambos no existen");
+        }
+        if (!containsEdge(a, b)) {
+            throw new GraphException("No existe arista entre los vértices [" + a + "] y [" + b + "]");
+        }
+        int indexA = indexOf(a);
+        int indexB = indexOf(b);
 
+        // Eliminar la arista estableciendo el valor a 0 en la matriz de adyacencia
+        adjacencyMatrix[indexA][indexB] = 0;
+
+        // Como es un grafo no dirigido, también hay que eliminar la arista en sentido contrario
+        adjacencyMatrix[indexB][indexA] = 0;
+    }
     // Recorrido en profundidad
     @Override
     public String dfs() throws GraphException, StackException, ListException {
