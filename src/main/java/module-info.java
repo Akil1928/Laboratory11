@@ -5,4 +5,6 @@ module ucr.lab.laboratory11 {
 
     opens ucr.lab.laboratory11 to javafx.fxml;
     exports ucr.lab.laboratory11;
+    exports controller;
+    opens controller to javafx.fxml;
 }
