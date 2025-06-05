@@ -16,17 +16,17 @@
                   <Font name="Arial" size="30.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#bubbleSortOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Graphic BST/AVL" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#graphicOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Graphic BTree" textFill="WHITE">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#impBubbleSortOnAction" prefHeight="62.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="BST/AVL Tour" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#tourOnAction" prefHeight="62.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Btree tour" textFill="WHITE">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#selectionSortOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="BST/AVL Operations" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#operationsOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Btree Operations" textFill="WHITE">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
@@ -42,7 +42,7 @@
    <center>
       <AnchorPane fx:id="contentPane" prefHeight="769.0" prefWidth="816.0" style="-fx-background-color: #de5757;" BorderPane.alignment="CENTER">
 
-         <Text fx:id="txtMessage" layoutX="4.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratory No. 11" textAlignment="CENTER" wrappingWidth="781.94921875">
+         <Text fx:id="txtMessage" layoutX="4.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratory No. 9" textAlignment="CENTER" wrappingWidth="781.94921875">
             <font>
                <Font name="Arial" size="40.0" />
             </font>

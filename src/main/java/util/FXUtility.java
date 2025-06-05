@@ -3,7 +3,7 @@ package util;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
-import ucr.lab.laboratory11.HelloApplication;
+import ucr.lab.HelloApplication;
 
 import java.io.IOException;
 import java.util.Optional;
