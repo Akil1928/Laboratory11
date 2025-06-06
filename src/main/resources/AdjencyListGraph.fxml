@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdjacencyListGraphController">
+    <top>
+        <VBox spacing="10.0" style="-fx-background-color: #E74C3C;">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label text="Adjacency List Graph" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <HBox spacing="10.0">
+                <Button fx:id="randomizeBtn" mnemonicParsing="false" onAction="#randomizeGraph" text="Randomize" />
+                <Button fx:id="containsVertexBtn" mnemonicParsing="false" onAction="#containsVertex" text="Contains Vertex" />
+                <Button fx:id="dfsBtn" mnemonicParsing="false" onAction="#performDFS" text="DFS Tour" />
+                <Button fx:id="containsEdgeBtn" mnemonicParsing="false" onAction="#containsEdge" text="Contains Edge" />
+                <Button fx:id="toStringBtn" mnemonicParsing="false" onAction="#showToString" text="To String" />
+                <Button fx:id="bfsBtn" mnemonicParsing="false" onAction="#performBFS" text="BFS Tour" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Edge between the vertexes:" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="fromVertexField" promptText="From" prefWidth="50.0" />
+                <Label text="....." textFill="WHITE" />
+                <TextField fx:id="toVertexField" promptText="To" prefWidth="50.0" />
+                <Label text="Weight:" textFill="WHITE" />
+                <TextField fx:id="weightField" promptText="Weight" prefWidth="60.0" />
+                <Button fx:id="addEdgeBtn" mnemonicParsing="false" onAction="#addEdge" text="Add Edge" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <BorderPane>
+            <left>
+                <VBox spacing="10.0" style="-fx-background-color: #D5EDDA; -fx-border-color: #C3E6CB;" prefWidth="300.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <Label text="ADJACENCY LIST GRAPH CONTENT..." style="-fx-font-weight: bold;" />
+                    <ScrollPane fx:id="graphContentScrollPane" fitToWidth="true" prefHeight="400.0">
+                        <TextArea fx:id="graphContentArea" editable="false" wrapText="true" />
+                    </ScrollPane>
+                </VBox>
+            </left>
+            <center>
+                <Pane fx:id="graphVisualizationPane" style="-fx-background-color: #D5EDDA;" prefWidth="400.0" prefHeight="400.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Pane>
+            </center>
+        </BorderPane>
+    </center>
+    <bottom>
+        <VBox spacing="5.0" style="-fx-background-color: #F8F9FA;">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <Label fx:id="statusLabel" text="Ready" />
+            <Label fx:id="resultLabel" text="" style="-fx-font-weight: bold;" />
+        </VBox>
+    </bottom>
+</BorderPane>

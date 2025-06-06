@@ -5,16 +5,14 @@ import domain.queue.QueueException;
 import domain.stack.StackException;
 import org.junit.jupiter.api.Test;
 
-import javax.swing.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class AdjacencyMatrixGraphTest {
+class AdjacencyListGraphTest {
 
     @Test
     void test() {
         try {
-            AdjacencyMatrixGraph graph = new AdjacencyMatrixGraph(50);
+            AdjacencyListGraph graph = new AdjacencyListGraph(50);
             for (char i = 'a'; i <= 'e'; i++) {
                 graph.addVertex(i);
             }
