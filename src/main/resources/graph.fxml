@@ -11,21 +11,21 @@
         <VBox>
             <children>
                 <!-- Header -->
-                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 15;" text="Adjacency Matrix Graph">
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10;" text="Adjacency Matrix Graph">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="16.0" />
                     </font>
                 </Label>
 
                 <!-- Controls -->
-                <HBox spacing="10.0" style="-fx-background-color: #d4edda; -fx-padding: 15;">
+                <HBox spacing="8.0" style="-fx-background-color: #d4edda; -fx-padding: 10;">
                     <children>
-                        <Button mnemonicParsing="false" onAction="#handleRandomize" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Randomize" />
-                        <Button mnemonicParsing="false" onAction="#handleContainsVertex" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Contains Vertex" />
-                        <Button mnemonicParsing="false" onAction="#handleContainsEdge" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Contains Edge" />
-                        <Button mnemonicParsing="false" onAction="#handleToString" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="To String" />
-                        <Button mnemonicParsing="false" onAction="#handleDFSTour" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="DFS Tour" />
-                        <Button mnemonicParsing="false" onAction="#handleBFSTour" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="BFS Tour" />
+                        <Button mnemonicParsing="false" onAction="#handleRandomize" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Randomize" />
+                        <Button mnemonicParsing="false" onAction="#handleContainsVertex" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Contains Vertex" />
+                        <Button mnemonicParsing="false" onAction="#handleContainsEdge" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="Contains Edge" />
+                        <Button mnemonicParsing="false" onAction="#handleToString" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="To String" />
+                        <Button mnemonicParsing="false" onAction="#handleDFSTour" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="DFS Tour" />
+                        <Button mnemonicParsing="false" onAction="#handleBFSTour" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #007bff; -fx-text-fill: white;" text="BFS Tour" />
                     </children>
                 </HBox>
             </children>
@@ -33,57 +33,57 @@
     </top>
 
     <center>
-        <HBox spacing="20.0">
+        <HBox spacing="15.0">
             <children>
                 <!-- Left Panel - Graph Visualization -->
-                <VBox prefWidth="450.0" spacing="10.0">
+                <VBox prefWidth="430.0" spacing="8.0">
                     <children>
                         <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Visualización del Grafo" />
-                        <Canvas fx:id="graphCanvas" height="400.0" width="400.0" style="-fx-border-color: #ddd; -fx-border-width: 1;" />
+                        <Canvas fx:id="graphCanvas" height="380.0" width="380.0" style="-fx-border-color: #ddd; -fx-border-width: 1;" />
                     </children>
                 </VBox>
 
                 <!-- Right Panel - Information -->
-                <VBox prefWidth="350.0" spacing="15.0">
+                <VBox prefWidth="330.0" spacing="10.0">
                     <children>
                         <!-- Vertices List -->
-                        <VBox spacing="5.0">
+                        <VBox spacing="3.0">
                             <children>
                                 <Label style="-fx-font-weight: bold;" text="Vértices:" />
-                                <TextArea fx:id="vertexListArea" editable="false" prefHeight="120.0" style="-fx-control-inner-background: #f8f9fa;" />
+                                <TextArea fx:id="vertexListArea" editable="false" prefHeight="100.0" style="-fx-control-inner-background: #f8f9fa;" />
                             </children>
                         </VBox>
 
                         <!-- Edges List -->
-                        <VBox spacing="5.0">
+                        <VBox spacing="3.0">
                             <children>
                                 <Label style="-fx-font-weight: bold;" text="Aristas:" />
-                                <TextArea fx:id="edgeListArea" editable="false" prefHeight="120.0" style="-fx-control-inner-background: #f8f9fa;" />
+                                <TextArea fx:id="edgeListArea" editable="false" prefHeight="100.0" style="-fx-control-inner-background: #f8f9fa;" />
                             </children>
                         </VBox>
 
                         <!-- Tour Results -->
-                        <VBox spacing="5.0">
+                        <VBox spacing="3.0">
                             <children>
                                 <Label style="-fx-font-weight: bold;" text="Resultado del Recorrido:" />
-                                <TextArea fx:id="tourResultArea" editable="false" prefHeight="80.0" style="-fx-control-inner-background: #fff3cd;" />
+                                <TextArea fx:id="tourResultArea" editable="false" prefHeight="70.0" style="-fx-control-inner-background: #fff3cd;" />
                             </children>
                         </VBox>
                     </children>
                 </VBox>
             </children>
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
             </padding>
         </HBox>
     </center>
 
     <bottom>
-        <VBox spacing="10.0">
+        <VBox spacing="8.0">
             <children>
                 <!-- Adjacency Matrix -->
-                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Matriz de Adyacencia" />
-                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="300.0" style="-fx-background-color: white;">
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Matriz de Adyacencia" />
+                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="250.0" style="-fx-background-color: white;">
                     <content>
                         <GridPane fx:id="matrixGrid" alignment="CENTER" hgap="1.0" vgap="1.0" />
                     </content>
@@ -93,7 +93,7 @@
                 <Label fx:id="statusLabel" style="-fx-background-color: #f8f9fa; -fx-padding: 5; -fx-border-color: #dee2e6; -fx-border-width: 1 0 0 0;" text="Listo" />
             </children>
             <padding>
-                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                <Insets bottom="8.0" left="15.0" right="15.0" top="8.0" />
             </padding>
         </VBox>
     </bottom>

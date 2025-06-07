@@ -10,40 +10,33 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.Group?>
-
 
 <BorderPane fx:id="mainBorderPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SinglyLinkedListGraphController">
     <top>
-        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f0f0f0;" BorderPane.alignment="CENTER">
+        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #f0f0f0;" BorderPane.alignment="CENTER">
             <children>
                 <Label text="Singly Linked List Graph">
                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
-                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="8.0">
                     <children>
-                        <Button fx:id="randomizeButton" mnemonicParsing="false" onAction="#handleRandomize" text="Randomize" />
-                        <Button fx:id="containsVertexButton" mnemonicParsing="false" onAction="#handleContainsVertex" text="Contains Vertex" />
-                        <Button fx:id="dfsTourButton" mnemonicParsing="false" onAction="#handleDFSTour" text="DFS Tour" />
-                        <Button fx:id="containsEdgeButton" mnemonicParsing="false" onAction="#handleContainsEdge" text="Contains Edge" />
-                        <Button fx:id="toStringButton" mnemonicParsing="false" onAction="#handleToString" text="To String" />
-                        <Button fx:id="bfsTourButton" mnemonicParsing="false" onAction="#handleBFSTour" text="BFS Tour" />
+                        <Button fx:id="randomizeButton" mnemonicParsing="false" onAction="#handleRandomize" prefHeight="25.0" prefWidth="85.0" text="Randomize" />
+                        <Button fx:id="containsVertexButton" mnemonicParsing="false" onAction="#handleContainsVertex" prefHeight="25.0" prefWidth="105.0" text="Contains Vertex" />
+                        <Button fx:id="dfsTourButton" mnemonicParsing="false" onAction="#handleDFSTour" prefHeight="25.0" prefWidth="80.0" text="DFS Tour" />
+                        <Button fx:id="containsEdgeButton" mnemonicParsing="false" onAction="#handleContainsEdge" prefHeight="25.0" prefWidth="100.0" text="Contains Edge" />
+                        <Button fx:id="toStringButton" mnemonicParsing="false" onAction="#handleToString" prefHeight="25.0" prefWidth="80.0" text="To String" />
+                        <Button fx:id="bfsTourButton" mnemonicParsing="false" onAction="#handleBFSTour" prefHeight="25.0" prefWidth="80.0" text="BFS Tour" />
                     </children>
                     <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
                     </VBox.margin>
                 </HBox>
             </children>
-            <BorderPane.margin>
-                <Insets />
-            </BorderPane.margin>
             <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
             </padding>
         </VBox>
     </top>

@@ -19,31 +19,34 @@
                         <Font name="System Bold" size="18.0" />
                     </font>
                     <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="8.0" />
                     </VBox.margin>
                 </Label>
-                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="10.0">
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="8.0">
                     <children>
-                        <Button fx:id="randomizeButton" minWidth="100.0" onAction="#handleRandomize" text="Randomize" />
-                        <Button fx:id="addVertexButton" minWidth="100.0" onAction="#handleAddVertex" text="Add Vertex" />
-                        <Button fx:id="addEdgesButton" minWidth="120.0" onAction="#handleAddEdgesAndWeights" text="Add Edges&amp;Weights" />
-                        <Button fx:id="removeVertexButton" minWidth="110.0" onAction="#handleRemoveVertex" text="Remove Vertex" />
-                        <Button fx:id="removeEdgesButton" minWidth="140.0" onAction="#handleRemoveEdgesAndWeights" text="Remove Edges&amp;Weights" />
-                        <Button fx:id="clearButton" minWidth="100.0" onAction="#handleClear" text="Clear" />
+                        <Button fx:id="randomizeButton" minWidth="85.0" prefHeight="30.0" onAction="#handleRandomize" text="Randomize" />
+                        <Button fx:id="addVertexButton" minWidth="85.0" prefHeight="30.0" onAction="#handleAddVertex" text="Add Vertex" />
+                        <Button fx:id="addEdgesButton" minWidth="110.0" prefHeight="30.0" onAction="#handleAddEdgesAndWeights" text="Add Edges&amp;Weights" />
+                        <Button fx:id="removeVertexButton" minWidth="100.0" prefHeight="30.0" onAction="#handleRemoveVertex" text="Remove Vertex" />
+                        <Button fx:id="removeEdgesButton" minWidth="130.0" prefHeight="30.0" onAction="#handleRemoveEdgesAndWeights" text="Remove Edges&amp;Weights" />
+                        <Button fx:id="clearButton" minWidth="70.0" prefHeight="30.0" onAction="#handleClear" text="Clear" />
                     </children>
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
                 </HBox>
             </children>
         </VBox>
     </top>
     <left>
-        <VBox prefHeight="200.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
             <children>
                 <Label text="ADJACENCY LIST GRAPH CONTENT...">
                     <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </VBox.margin>
                 </Label>
-                <TextArea fx:id="contentTextArea" editable="false" prefHeight="505.0" prefWidth="280.0" wrapText="true" />
+                <TextArea fx:id="contentTextArea" editable="false" prefHeight="505.0" prefWidth="250.0" wrapText="true" />
             </children>
             <BorderPane.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" />

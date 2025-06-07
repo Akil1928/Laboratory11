@@ -9,67 +9,93 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdjacencyListGraphController">
     <top>
-        <VBox spacing="10.0" style="-fx-background-color: #E74C3C;">
+        <VBox spacing="6.0" style="-fx-background-color: #E74C3C;" prefHeight="130.0" maxHeight="150.0">
             <padding>
-                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
             </padding>
             <Label text="Adjacency List Graph" textFill="WHITE">
                 <font>
-                    <Font name="System Bold" size="24.0" />
+                    <Font name="System Bold" size="16.0" />
                 </font>
             </Label>
-            <HBox spacing="10.0">
-                <Button fx:id="randomizeBtn" mnemonicParsing="false" onAction="#randomizeGraph" text="Randomize" />
-                <Button fx:id="containsVertexBtn" mnemonicParsing="false" onAction="#containsVertex" text="Contains Vertex" />
-                <Button fx:id="dfsBtn" mnemonicParsing="false" onAction="#performDFS" text="DFS Tour" />
-                <Button fx:id="containsEdgeBtn" mnemonicParsing="false" onAction="#containsEdge" text="Contains Edge" />
-                <Button fx:id="toStringBtn" mnemonicParsing="false" onAction="#showToString" text="To String" />
-                <Button fx:id="bfsBtn" mnemonicParsing="false" onAction="#performBFS" text="BFS Tour" />
+
+            <!-- Primera fila de botones -->
+            <HBox spacing="8.0" alignment="CENTER_LEFT">
+                <Button fx:id="randomizeBtn" mnemonicParsing="false" onAction="#randomizeGraph"
+                        text="Randomize" prefWidth="90.0" />
+                <Button fx:id="containsVertexBtn" mnemonicParsing="false" onAction="#containsVertex"
+                        text="Contains Vertex" prefWidth="120.0" />
+                <Button fx:id="dfsBtn" mnemonicParsing="false" onAction="#performDFS"
+                        text="DFS Tour" prefWidth="80.0" />
             </HBox>
-            <HBox spacing="10.0">
-                <Label text="Edge between the vertexes:" textFill="WHITE">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="fromVertexField" promptText="From" prefWidth="50.0" />
-                <Label text="....." textFill="WHITE" />
-                <TextField fx:id="toVertexField" promptText="To" prefWidth="50.0" />
+
+            <!-- Segunda fila de botones -->
+            <HBox spacing="8.0" alignment="CENTER_LEFT">
+                <Button fx:id="containsEdgeBtn" mnemonicParsing="false" onAction="#containsEdge"
+                        text="Contains Edge" prefWidth="120.0" />
+                <Button fx:id="toStringBtn" mnemonicParsing="false" onAction="#showToString"
+                        text="To String" prefWidth="90.0" />
+                <Button fx:id="bfsBtn" mnemonicParsing="false" onAction="#performBFS"
+                        text="BFS Tour" prefWidth="80.0" />
+            </HBox>
+
+            <!-- Tercera fila - Controles de aristas -->
+            <HBox spacing="8.0" alignment="CENTER_LEFT">
+                <Label text="From:" textFill="WHITE" />
+                <TextField fx:id="fromVertexField" promptText="A" prefWidth="40.0" />
+                <Label text="To:" textFill="WHITE" />
+                <TextField fx:id="toVertexField" promptText="B" prefWidth="40.0" />
                 <Label text="Weight:" textFill="WHITE" />
-                <TextField fx:id="weightField" promptText="Weight" prefWidth="60.0" />
-                <Button fx:id="addEdgeBtn" mnemonicParsing="false" onAction="#addEdge" text="Add Edge" />
+                <TextField fx:id="weightField" promptText="5" prefWidth="50.0" />
+                <Button fx:id="addEdgeBtn" mnemonicParsing="false" onAction="#addEdge"
+                        text="Add Edge" prefWidth="80.0" />
             </HBox>
         </VBox>
     </top>
+
     <center>
         <BorderPane>
             <left>
-                <VBox spacing="10.0" style="-fx-background-color: #D5EDDA; -fx-border-color: #C3E6CB;" prefWidth="300.0">
+                <VBox spacing="8.0" style="-fx-background-color: #D5EDDA; -fx-border-color: #C3E6CB;"
+                      prefWidth="250.0" minWidth="200.0" maxWidth="300.0">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="10.0" left="8.0" right="8.0" top="10.0" />
                     </padding>
-                    <Label text="ADJACENCY LIST GRAPH CONTENT..." style="-fx-font-weight: bold;" />
-                    <ScrollPane fx:id="graphContentScrollPane" fitToWidth="true" prefHeight="400.0">
-                        <TextArea fx:id="graphContentArea" editable="false" wrapText="true" />
+                    <Label text="ADJACENCY LIST CONTENT" style="-fx-font-weight: bold; -fx-font-size: 12px;" />
+                    <ScrollPane fx:id="graphContentScrollPane" fitToWidth="true" prefHeight="350.0"
+                                vbarPolicy="AS_NEEDED" hbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                        <TextArea fx:id="graphContentArea" editable="false" wrapText="true"
+                                  style="-fx-font-size: 11px;" />
                     </ScrollPane>
                 </VBox>
             </left>
+
             <center>
-                <Pane fx:id="graphVisualizationPane" style="-fx-background-color: #D5EDDA;" prefWidth="400.0" prefHeight="400.0">
-                    <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                    </padding>
-                </Pane>
+                <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+                    <VBox style="-fx-background-color: #D5EDDA;">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                        <Label text="Graph Visualization" style="-fx-font-weight: bold; -fx-font-size: 13px;" />
+                        <Pane fx:id="graphVisualizationPane" prefWidth="400.0" prefHeight="350.0"
+                              minWidth="300.0" minHeight="250.0" maxWidth="600.0" maxHeight="500.0"
+                              VBox.vgrow="ALWAYS">
+                        </Pane>
+                    </VBox>
+                </ScrollPane>
             </center>
         </BorderPane>
     </center>
+
     <bottom>
-        <VBox spacing="5.0" style="-fx-background-color: #F8F9FA;">
+        <VBox spacing="3.0" style="-fx-background-color: #F8F9FA;" maxHeight="60.0">
             <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                <Insets bottom="6.0" left="10.0" right="10.0" top="6.0" />
             </padding>
-            <Label fx:id="statusLabel" text="Ready" />
-            <Label fx:id="resultLabel" text="" style="-fx-font-weight: bold;" />
+            <Label fx:id="statusLabel" text="Ready" style="-fx-font-size: 11px;" />
+            <ScrollPane fitToWidth="true" prefHeight="25.0" vbarPolicy="NEVER" hbarPolicy="AS_NEEDED">
+                <Label fx:id="resultLabel" text="" style="-fx-font-weight: bold; -fx-font-size: 11px;" wrapText="true" />
+            </ScrollPane>
         </VBox>
     </bottom>
 </BorderPane>

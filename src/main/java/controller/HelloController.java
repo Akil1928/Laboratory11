@@ -60,7 +60,7 @@ public class HelloController {
     }
 
     /**
-     * Carga la vista de gráficos para Adjacency List Graph
+     * Carga la vista de Matrix Graph
      */
     @FXML
     public void graphicOnAction(ActionEvent actionEvent) {
@@ -68,7 +68,7 @@ public class HelloController {
     }
 
     /**
-     * Carga la vista de operaciones de grafos con listas de adyacencia
+     * Carga la vista de List Operations
      */
     @FXML
     public void operationsOnAction(ActionEvent actionEvent) {
@@ -76,7 +76,7 @@ public class HelloController {
     }
 
     /**
-     * Carga la vista de recorridos de grafos
+     * Carga la vista de Matrix Operations
      */
     @FXML
     public void tourOnAction(ActionEvent actionEvent) {
@@ -84,7 +84,7 @@ public class HelloController {
     }
 
     /**
-     * Carga la vista de grafo con lista enlazada
+     * Carga la vista de List Graph
      */
     @FXML
     public void linkedGraphOnAction(ActionEvent event) {
@@ -92,26 +92,25 @@ public class HelloController {
     }
 
     /**
-     * Carga la vista de operaciones de grafo con matriz de adyacencia
-     */
-    @FXML
-    public void matrixOperationsOnAction(ActionEvent event) {
-        load("AdjacencyMatrixOperations.fxml");
-    }
-
-    /**
-     * Carga la vista de grafo con matriz de adyacencia
+     * Carga la vista de Linked Graph
      */
     @FXML
     public void matrixGraphOnAction(ActionEvent event) {
         load("graph.fxml");
     }
 
-    // Estos métodos se mantienen para compatibilidad pero redirigen a las nuevas vistas
+    /**
+     * Carga la vista de Linked Operations
+     */
+    @FXML
+    public void linkedOperationsOnAction(ActionEvent event) {
+        load("AdjacencyMatrixOperations.fxml");
+    }
 
+    // Métodos de compatibilidad
     @FXML
     void linkedOperationOnAction(ActionEvent event) {
-        linkedGraphOnAction(event);
+        linkedOperationsOnAction(event);
     }
 
     @FXML
@@ -122,5 +121,10 @@ public class HelloController {
     @FXML
     void listOperationsOnAction(ActionEvent event) {
         operationsOnAction(event);
+    }
+
+    @FXML
+    void matrixOperationsOnAction(ActionEvent event) {
+        tourOnAction(event);
     }
 }

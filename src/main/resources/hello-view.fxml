@@ -9,39 +9,44 @@
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
    <left>
-      <VBox prefHeight="694.0" prefWidth="299.0" style="-fx-background-color: #8a5e5e;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="694.0" prefWidth="299.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="WHITE">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#graphicOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Lista Adyacencia" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#graphicOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Matrix Graph" textFill="WHITE">
                <font>
                   <Font name="Arial" size="26.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#linkedGraphOnAction" prefHeight="62.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Lista Enlazada" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#linkedGraphOnAction" prefHeight="62.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="List Graph" textFill="WHITE">
                <font>
                   <Font name="Arial" size="26.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#matrixGraphOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Matriz" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#matrixGraphOnAction" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Linked Graph" textFill="WHITE">
                <font>
                   <Font name="Arial" size="26.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#tourOnAction" prefHeight="62.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Recorridos" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#tourOnAction" prefHeight="62.0" prefWidth="274.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Matrix Operations" textFill="WHITE">
                <font>
                   <Font name="Arial" size="26.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#operationsOnAction" prefHeight="62.0" prefWidth="299.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Operaciones" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#operationsOnAction" prefHeight="62.0" prefWidth="299.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="List Operations" textFill="WHITE">
                <font>
                   <Font name="Arial" size="26.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#Exit" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Salir" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#linkedOperationsOnAction" prefHeight="62.0" prefWidth="299.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Linked Operations" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Exit" prefHeight="62.0" prefWidth="219.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Exit" textFill="WHITE">
                <font>
                   <Font name="Arial" size="30.0" />
                </font>
@@ -50,8 +55,8 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="contentPane" prefHeight="769.0" prefWidth="816.0" style="-fx-background-color: #de5757;" BorderPane.alignment="CENTER">
-         <Text fx:id="txtMessage" layoutX="4.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratory No. 11" textAlignment="CENTER" wrappingWidth="781.94921875">
+      <AnchorPane fx:id="contentPane" prefHeight="769.0" prefWidth="816.0" style="-fx-background-color: #34495e;" BorderPane.alignment="CENTER">
+         <Text fx:id="txtMessage" layoutX="4.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratory No. 11" textAlignment="CENTER" wrappingWidth="781.94921875" fill="WHITE">
             <font>
                <Font name="Arial" size="40.0" />
             </font>
